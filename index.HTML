@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                      <title>Design</title>
+<script>
+function calculate()
+{
+var
+h=parseFloat(document.getElementById("a").value);
+var
+x=parseFloat(document.getElementById("b").value);
+var
+y=parseFloat(document.getElementById("c").value);
+var w= (30/(2*x))*(Math.sqrt(2/(y+1)));
+document.getElementById("d").value=w;
+var E=(((y+1)/2)+(((y-1)/2)/(Math.sqrt(1+(12*(h/w))))));
+var dl=(h*0.412)*(((E+0.3)*((w/h)+0.264))/((E-0.258)*((w/h)+0.8)));
+var l=(30/(2*x*Math.sqrt(E)))-(2*dl);
+var k=l+(2*dl);
+document.getElementById("e").value=l;
+document.getElementById("f").value=k;
+  }
+
+</script>
+      <style>
+h1{
+            text-align:center;
+            font-family: cursive;
+            text-decoration:underline;
+            font-size: 45px;
+}
+body{
+margin-left:17%;
+font-weight:bolder;
+color:white;
+font-size :25px;
+background: rgb(255,0,0);
+
+background: linear-gradient(90deg, rgba(255,0,0,1) 18%, rgba(0,0,0,1) 50%, rgba(0,62,255,0.9862977566926375) 81%);
+height :1000px;
+}
+#a{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:235px;border-radius :7px;height:30px;width:22% }
+#b{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:185px;border-radius:7px;height:30px;width:22%}
+#c{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:323px;border-radius:7px;height:30px;width:22%}
+#d{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:208px;border-radius:7px;height:30px;width:22%}
+#e{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:203px;border-radius:7px;height:30px;width:22%}
+#f{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:55px;border-radius:7px;height:30px;width:22%}
+
+#b1{
+   margin-left:37%;
+   font-size:30px;
+   border-radius:6px;
+   color : white;
+   background-color:black;
+   font-weight:bolder;
+   border-style:double;
+   border-color:white;
+   border-width:3.5px;
+
+}
+#b2{
+    margin-left:38.5%;
+   text-align:center;
+   font-size:30px;
+   border-radius:6px;
+   color : white;
+   background-color:black;
+   font-weight:bolder;
+   border-style:double;
+   border-color:white;
+   border-width:3.5px;
+}
+h1{
+margin-right:20%;
+ }
+h3{
+   margin-left:35%;
+   border-radius:4px;
+   font-weight:bolder;
+   background-color:yellow;
+   color:black;
+   padding-left : 1.5%;
+    width:13%;
+    border-style:dotted;
+    border-color:black;
+    border-width:3px;
+}
+label{
+font-family:Garamond,serif;
+font-size:28px;
+ }
+
+      </style>
+           </head>
+           <body>
+                     <h1> Design of Microstrip Patch Antenna </h1>
+                     <h3>   EC18B1051 </h3>
+          <form name="design">
+         <label for="height" >Enter height of Antenna ( in cm) :</label>
+             <input type="number" id="a"name="A" placeholder="Enter the height....  : " required> <br /><br />
+        
+      <label for="freq" >Enter Resonant Frequency ( in GHz) :</label>
+            <input type="number" id="b" name="B" placeholder="Enter the resonant Frequency.... " required> <br /><br />
+      
+      <label for="diele" >Enter Dielectric Constant :</label>
+            <input type="number" id="c" name="C" placeholder="Enter the Dielectric Constant.... " required> <br /><br />
+           
+        <button type="button" id="b1" name="L" onClick="calculate()">Calculate</button><br /><br />
+  
+          <label for="width" > The Width of Antenna ( in cm) , W :</label>
+            <input type="number" id="d" name="D" placeholder="Width Of Antenna is .... " required> <br /><br />
+   
+        <label for="length" > The Length of Antenna ( in cm) , L : </label>
+            <input type="number" id="e" name="E" placeholder="Length Of Antenna is ... " required> <br /><br />
+ 
+        <label for="EffLength" > The Effective Length of Antenna ( in cm) , Leff :</label>
+            <input type="number" id="f" name="F" placeholder="Effective Length Of Antenna is ... " required> <br /><br />
+
+            <input type="reset" id ="b2"  value ="Clear"><br /><br />
+</form>
+</body>
+</html>
+
+
