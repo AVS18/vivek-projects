@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+          <head>
+                      <title>Design</title>
+<script>
+function calculate()
+{
+var 
+Fc=parseFloat(document.getElementById("a").value);
+var
+Fa=parseFloat(document.getElementById("b").value);
+var
+R=parseFloat(document.getElementById("c").value);
+var
+A=parseFloat(document.getElementById("e").value);
+var S=(10**(R/10))-1;
+var k=((2*((10**(A/10))-1))/S)-1;
+var L=Math.log((k)+(Math.sqrt(((k**2))-1)));
+var W=(Fa/Fc);
+var C=Math.log((W)+(Math.sqrt((W**2)-1)));
+var N=(L/(2*C));
+document.getElementById("d").value=N;
+  }
+
+</script>
+      <style>
+h1{
+            text-align:center;
+            font-family: cursive;
+            text-decoration:underline;
+            font-size: 45px;
+}
+body{
+margin-left:17%;
+font-weight:bolder;
+color:white;
+font-size :25px;
+background: rgb(255,0,0);
+
+background: linear-gradient(90deg, rgba(255,0,0,1) 18%, rgba(0,0,0,1) 50%, rgba(0,62,255,0.9862977566926375) 81%);
+height :1000px;
+}
+#a{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:235px;border-radius :7px;height:30px;width:22% }
+#b{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:185px;border-radius:7px;height:30px;width:22%}
+#c{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:323px;border-radius:7px;height:30px;width:22%}
+#d{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:410px;border-radius:7px;height:30px;width:22%}
+#e{
+padding-left:3%;font-size :15px;font-weight:bolder;margin-left:263px;border-radius:7px;height:30px;width:22%}
+
+
+#b1{
+   margin-left:37%;
+   font-size:30px;
+   border-radius:6px;
+   color : white;
+   background-color:black;
+   font-weight:bolder;
+   border-style:double;
+   border-color:white;
+   border-width:3.5px;
+
+}
+#b2{
+    margin-left:38.5%;
+   text-align:center;
+   font-size:30px;
+   border-radius:6px;
+   color : white;
+   background-color:black;
+   font-weight:bolder;
+   border-style:double;
+   border-color:white;
+   border-width:3.5px;
+}
+h1{
+margin-right:20%;
+ }
+h3{
+   margin-left:35%;
+   border-radius:4px;
+   font-weight:bolder;
+   background-color:yellow;
+   color:black;
+   padding-left : 1.5%;
+    width:13%;
+    border-style:dotted;
+    border-color:black;
+    border-width:3px;
+}
+label{
+font-family:Garamond,serif;
+font-size:28px;
+ }
+
+      </style>
+           </head>
+           <body>
+                     <h1> Design of Microstrip Chebyshev Low Pass Filter  </h1>
+                     <h3>   EC18B1051 </h3>
+          <form name="design">
+         <label for="height" >Enter cut -off frequency ( in GHz ) :</label>
+             <input type="number" id="a"name="A" placeholder="Enter the value of Fc....  : " required> <br /><br />
+        
+      <label for="freq" >Enter Attenuation Frequency ( in GHz) :</label>
+            <input type="number" id="b" name="B" placeholder="Enter the Attenuation Frequency.... " required> <br /><br />
+      
+      <label for="diele" >Enter Ripple Factor ( in db) :</label>
+            <input type="number" id="c" name="C" placeholder="Enter value of Ripple Factor ..." required> <br /><br />
+
+  <label for="actor" >Enter Attenuation Factor ( in db) :</label>
+            <input type="number" id="e" name="K" placeholder="Enter the Attenuation Factor.... " required> <br /><br />
+      
+           
+        <button type="button" id="b1" name="L" onClick="calculate()">Calculate</button><br /><br />
+  
+          <label for="width" > The Order of filter is  :</label>
+            <input type="number" id="d" name="D" placeholder=" Order of filter is .... " required> <br /><br />
+   
+
+            <input type="reset" id ="b2"  value ="Clear"><br /><br />
+</form>
+</body>
+</html>
+
+
